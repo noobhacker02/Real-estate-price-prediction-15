@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>House Price Prediction</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <script src="/static/javascript/script.js"></script>
+	<link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+<div class="img"></div>
+<h1 class="title">House Price Prediction</h1>
+<form class="form">
+	<div>
+		<h2 class="loc">Location</h2>
+		<select class="location" name="Location" id="uiLocations">
+		  <option value=""  selected="selected">Select Location</option>
+			  <option>Dombivali</option>
+			  <option>airoli</option>
+		</select>
+	  </div>
+	<h2 class="sqft">Area in Sq. ft</h2>
+    <input class="area"  type="number" id="uiSqft" class="floatLabel" name="Squareft" value="1000">
+	<h2 class="bhk">BHK</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-bhk-1" name="uiBHK" value="1" checked/>
+		<label for="radio-bhk-1">1</label>
+		<input type="radio" id="radio-bhk-2" name="uiBHK" value="2"/>
+		<label for="radio-bhk-2">2</label>
+		<input type="radio" id="radio-bhk-3" name="uiBHK" value="3"/>
+		<label for="radio-bhk-3">3</label>
+		<input type="radio" id="radio-bhk-4" name="uiBHK" value="4"/>
+		<label for="radio-bhk-4">4</label>
+		<input type="radio" id="radio-bhk-5" name="uiBHK" value="5"/>
+		<label for="radio-bhk-5">5</label>
+	</div>
+	<h2 class="Lift">Lift</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-Lift-1" name="uiLift" value="0" checked/>
+		<label for="radio-Lift-1">0</label>
+		<input type="radio" id="radio-Lift-2" name="uiLift" value="1"/>
+		<label for="radio-Lift-2">1</label>
+	</div>
+	<h2 class="Parking">Parking</h2>
+	<div class="switch-field">
+		<input type="radio" id="radio-Park-1" name="uiPark" value="0" checked/>
+		<label for="radio-Park-1">0</label>
+		<input type="radio" id="radio-Park-2" name="uiPark" value="1"/>
+		<label for="radio-Park-2">1</label>
+	</div>
+
+	<button class="submit" onclick="onClickedEstimatePrice()" type="button">ESTIMATE</button>
+	<div id="uiEstimatedPrice" class="result">	<h2></h2> </div>
+</body>
+</html>
